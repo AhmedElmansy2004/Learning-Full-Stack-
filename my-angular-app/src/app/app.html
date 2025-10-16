@@ -1,12 +1,5 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<!--
 <style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
@@ -329,14 +322,53 @@
     </div>
   </div>
 </main>
+<!--<router-outlet />-->
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<main>
 
+  <h1 id="calctitle">
+      Calculator App
+  </h1>
+  <br>
+  <div id="Calculator">
+    <div id="displayScreen">  
+      <div id="aboveDisplay">{{subDisplay}}</div>
 
-<router-outlet />
+      <div id="mainDisplay">{{mainDisplayedNumber}}</div>
+      <br>
+    </div>
+
+    <button id="moduloBtn">%</button>
+    <button id="CEBtn" (click)="clear()">CE</button>
+    <button id="CBtn" (click)="clear()">C</button>
+    <button id="backspaceBtn" (click)="delete()">⌫</button>
+    <br>
+    <button id="multinvBtn">¹∕ₓ</button>
+    <button id="sqrBtn">x²</button>
+    <button id="sqrtBtn">√x</button>
+    <button id="divisionBtn">÷</button>
+    <br>
+    <button id="7Btn" (click)="writeOnDisplay('7')">7</button>
+    <button id="8Btn" (click)="writeOnDisplay('8')">8</button>
+    <button id="9Btn" (click)="writeOnDisplay('9')">9</button>
+    <button id="multBtn">×</button>
+    <br>
+    <button id="4Btn" (click)="writeOnDisplay('4')">4</button>
+    <button id="5Btn" (click)="writeOnDisplay('5')">5</button>
+    <button id="6Btn" (click)="writeOnDisplay('6')">6</button>
+    <button id="minusBtn">−</button>
+    <br>
+    <button id="1Btn" (click)="writeOnDisplay('1')">1</button>
+    <button id="2Btn" (click)="writeOnDisplay('2')">2</button>
+    <button id="3Btn" (click)="writeOnDisplay('3')">3</button>
+    <button id="plusBtn">+</button>
+    <br>
+    <button id="signBtn" (click)="putSign()">±</button>
+    <button id="zeroBtn" (click)="writeOnDisplay('0')">0</button>
+    <button id="decimalPtBtn" (click)="addPnt()">.</button>
+    <button id="equalBtn">=</button>
+    <br>
+
+  </div>
+
+</main>
