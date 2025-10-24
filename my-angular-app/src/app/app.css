@@ -8,10 +8,10 @@ main {
   text-align: center;
 }
 
-/* Title styling */
+/* Calculator title styling */
 #calctitle {
   font-size: 60px;
-  margin-bottom: 20px; /* Space between title and calculator */
+  margin-bottom: 20px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   letter-spacing: 1px;
 }
@@ -27,10 +27,10 @@ main {
 }
 
 #displayScreen{
-    text-align: left;
+    text-align: right;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 360px;         /* fixed width */
-    height: 90px;         /* fixed height */
+    width: 360px;
+    height: 90px;
     border: 2px solid #888;
     border-radius: 8px;
     background-color: #fdfdfd;
@@ -48,9 +48,9 @@ main {
 
 #mainDisplay{
     font-size: 50px;
-    white-space: nowrap;          /* keeps digits in one line */
-    overflow-x: auto;             /* ✅ allow horizontal scroll */
-    overflow-y: hidden;           /* no vertical scroll */
+    white-space: nowrap;
+    overflow-x: auto;             
+    overflow-y: hidden;           
     align-items: center;
     width: 100%;
     height: 80%;
@@ -96,11 +96,25 @@ button {
 
 button:hover {
   background-color: rgb(230, 230, 230);
-  box-shadow: 0 1px 0 darkgrey; /* reduce shadow when pressed */
+  box-shadow: 0 1px 0 darkgrey; 
 }
 
 button:active{
     background-color: rgb(230, 230, 230);
-    transform: translateY(3px); /* pushes the button down */
-    box-shadow: 0 1px 0 darkgrey; /* reduce shadow when pressed */
+    transform: translateY(3px); 
+    box-shadow: 0 1px 0 darkgrey; 
 }
+
+.disabledbtn {
+  cursor: not-allowed;
+  background-color: rgb(220, 219, 219);
+  box-shadow: 0 1px 0 darkgrey;
+}
+
+.disabledbtn:hover{
+  cursor: not-allowed;
+  background-color: rgb(220, 219, 219);
+  box-shadow: 0 1px 0 darkgrey;
+}
+
+
